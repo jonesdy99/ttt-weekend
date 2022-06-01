@@ -3,7 +3,7 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-
+const board = document.querySelectorAll('.board')
 
 
 /*------------------------ Cached Element References ------------------------*/
