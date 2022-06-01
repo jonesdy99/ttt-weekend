@@ -2,9 +2,6 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let turn = '1'
-let board = forEach(board.length)
-
 
 
 
@@ -19,3 +16,10 @@ let board = forEach(board.length)
 
 /*-------------------------------- Functions --------------------------------*/
 
+function init()
+
+function init(){
+  let board = [null,null,null,null,null,null,null,null]
+  let turn = ''
+  let winner = null
+}
