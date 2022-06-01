@@ -24,4 +24,10 @@ function init() {
   let board = [null,null,null,null,null,null,null,null]
   let turn = 1
   let winner = null
+  console.log(init)
+  render()
+}
+
+function render(){
+  
 }
