@@ -8,6 +8,7 @@ let board, turn, winner
 
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = document.querySelectorAll('.squares')
+const messageEl = document.querySelector('#message')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
