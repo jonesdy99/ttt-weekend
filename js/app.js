@@ -24,10 +24,20 @@ function init() {
   let board = [null,null,null,null,null,null,null,null]
   let turn = 1
   let winner = null
-  console.log(init)
   render()
 }
 
 function render(){
-  
-}
+  board.forEach(function(sqaure, index){
+    if (square === 1){
+      squareEls[idx].textContent = 'X'
+    } else if (square === -1){
+      squareEls[idx].textContent = 'O'
+    } else {
+      squareEls[idx].textContent = null
+    }
+  });
+
+  if(winner===null){
+    
+  }
