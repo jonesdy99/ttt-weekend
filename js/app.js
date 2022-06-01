@@ -2,12 +2,12 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-
+let board, turn, winner
 
 
 
 /*------------------------ Cached Element References ------------------------*/
-
+const squareEls = document.querySelectorAll('.squares')
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -16,10 +16,10 @@
 
 /*-------------------------------- Functions --------------------------------*/
 
-function init()
+init()
 
-function init(){
+function init() {
   let board = [null,null,null,null,null,null,null,null]
-  let turn = ''
+  let turn = 1
   let winner = null
 }
