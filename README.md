@@ -127,4 +127,4 @@
   // b) Store the new reset button element in a constant named `resetBtnEl`.
 
   // c) Attach an event listener to the `resetBtnEl`. On the `'click'` event it 
-  //    should call the `init` function you created in 3.
+  //    should call the `init` function you created in 3.`
