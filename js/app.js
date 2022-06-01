@@ -1,9 +1,12 @@
 /*-------------------------------- Constants --------------------------------*/
 
 
-
 /*---------------------------- Variables (state) ----------------------------*/
-const board = document.querySelectorAll('.board')
+let turn = '1'
+let board = forEach(board.length)
+
+
+
 
 
 /*------------------------ Cached Element References ------------------------*/
