@@ -13,7 +13,9 @@ console.log(squareEls)
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-
+squareEls.forEach(function(squares){
+  squares.addEventListener('click',handleClick)
+})
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -47,6 +49,9 @@ function render(){
   } 
 }
 
+function handleClick(evt){
+  const 
+}
 
 
 
