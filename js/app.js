@@ -20,24 +20,69 @@ console.log(squareEls)
 
 init()
 
+
 function init() {
-  let board = [null,null,null,null,null,null,null,null]
-  let turn = 1
-  let winner = null
+  board = [null,null,null,null,null,null,null,null,null]
+  turn = 1
+  winner = null
   render()
 }
 
 function render(){
-  board.forEach(function(sqaure, index){
-    if (square === 1){
-      squareEls[idx].textContent = 'X'
-    } else if (square === -1){
-      squareEls[idx].textContent = 'O'
+  board.forEach(function(element, index) {
+    if (board[index] === 1){
+      squareEls[index].textContent = 'X'
+    } else if (board[index] === -1){
+      squareEls[index].textContent = 'O'
     } else {
-      squareEls[idx].textContent = null
+      squareEls[index].textContent = null
     }
   });
+  renderMessage()
+}
 
-  if(winner===null){
-    
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //   if(winner === null){
+//     return(turn === 1 ? messageEl.textContent = "Player 1's turn" : messageEl)
+//     textContent = "Player 2's turn!"
+//   } else if (winner === 'T'){
+//     return messageEl.textContent = 'We have a tie!'
+//   } else {
+//     return (winner === 1 ? messageEl.textContent = "Player 1 has won it!" :
+//     messageEl.textContent = 'Player 2 has won it!')
+//   }
+// }
