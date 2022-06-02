@@ -2,8 +2,10 @@
 const winningCombos = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[2,5,8],[1,4,7],[0,4,8],[2,4,6]]
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, winner
-
+// let board, turn, winner
+  let board = [null,null,null,null,null,null,null,null,null]
+  let turn = 1
+  let winner = null
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -24,14 +26,14 @@ init()
 
 
 function init() {
-  board = [null,null,null,null,null,null,null,null,null]
-  turn = 1
-  winner = null
+  // board = [null,null,null,null,null,null,null,null,null]
+  // turn = 1
+  // winner = null
   render()
 }
 
 function render(){
-  board.forEach(function(element, index) {
+  board.forEach(function(squares, index) {
     if (board[index] === 1){
       squareEls[index].textContent = 'X'
     } else if (board[index] === -1){
@@ -40,7 +42,7 @@ function render(){
       squareEls[index].textContent = null
     }
   });
-  renderMessage()
+  // renderMessage()
 
   if(winner === null){
     `Keep going! It's ${board} turn!`
@@ -50,51 +52,20 @@ function render(){
 }
 
 function handleClick(evt){
-  const 
+  const sqIdx = parseInt(evt.target.id.slice(2))
+  console.log(sqIdx)
+  if (board[sqIdx] !== null){
+    return 'This square has been taken! Choose a different one!'
+  } else if (winner !== null){
+    return 'Game Over! Go again!'
+  } else { 
+    board[sqIdx] = turn
+    turn *= -1
+    getWinner()
+    render()
+  }
 }
 
+function getWinner(){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //   if(winner === null){
-//     return(turn === 1 ? messageEl.textContent = "Player 1's turn" : messageEl)
-//     textContent = "Player 2's turn!"
-//   } else if (winner === 'T'){
-//     return messageEl.textContent = 'We have a tie!'
-//   } else {
-//     return (winner === 1 ? messageEl.textContent = "Player 1 has won it!" :
-//     messageEl.textContent = 'Player 2 has won it!')
-//   }
-// }
+}
