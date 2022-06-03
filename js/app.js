@@ -2,17 +2,17 @@
 const winningCombos = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[2,5,8],[1,4,7],[0,4,8],[2,4,6]]
 
 
+
 /*---------------------------- Variables (state) ----------------------------*/
-// let board, turn, winner
-  let board = [null,null,null,null,null,null,null,null,null]
-  let turn = 1
-  let winner = null
+let board, turn, winner
+
 
 
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = document.querySelectorAll('.squares')
 const messageEl = document.querySelector('#message')
-console.log(squareEls)
+const resetBtn = document.querySelector('.reset')
+console.log(resetBtn)
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -20,12 +20,20 @@ squareEls.forEach(function(squares){
   squares.addEventListener('click',handleClick)
 })
 
+resetBtn.addEventListener('click',init)
+
+
+
+
 /*-------------------------------- Functions --------------------------------*/
 
 init()
 
 
 function init() {
+  board = [null,null,null,null,null,null,null,null,null]
+  turn = 1
+  winner = null
   render()
 }
 
