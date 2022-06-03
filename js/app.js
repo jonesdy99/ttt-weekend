@@ -43,10 +43,10 @@ function render(){
 
   if(winner === null){
     messageEl.textContent = `Keep going! Player ${turn === 1 ? "X" : "0"}'s turn!`
-  } else if(winner = 'T'){
+  } else if(winner === 'T'){
     messageEl.textContent = `Oh! It's a tie! Go Again!`
-  } else if (winner = 1 || -1){
-    messageEl.textContent = `Player ${turn === 1 ? "0" : "X"} won!`
+  } else if (winner === 1 || winner === -1){
+    messageEl.textContent = `Player ${winner === 1 ? "X" : "0"} won!`
   } 
 }
 
@@ -70,10 +70,13 @@ function getWinner() {
       let sum = board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]]
       if (sum === 3) {
           winner = 1
+          return
       } else  if (sum === -3) {
           winner = -1
+          return
       } else if (board.includes(null) === false) {
           winner = 'T'
+          return
       }else {
           winner = null
       }
